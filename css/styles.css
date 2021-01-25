@@ -847,7 +847,7 @@ color: rgba(255, 255, 255, 0.6);
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
-  line-height: 23px;
+  line-height: 1.15;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--text-color);
@@ -856,4 +856,31 @@ color: rgba(255, 255, 255, 0.6);
 .modal-form {
   display: flex;
   flex-direction: column;
+  margin-left: 40px;
+  margin-right: 40px;
+  
 }
+
+.m-field {
+  position: relative;
+  margin-bottom: 28px;
+  
+}
+
+.m-field > input {
+  width: 448px;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+.m-icon {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  margin-left: 12px;
+}
+/*.m-field > input {
+display: block;
+}*/
