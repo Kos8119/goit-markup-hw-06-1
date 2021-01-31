@@ -827,7 +827,7 @@ color: rgba(255, 255, 255, 0.6);
 .close {
   position: absolute;
   right: 0;
-  margin-top: 8px;
+  margin-top: 1px;
   margin-right: 8px;
   background-color: var(--header-bg-color);
 }
@@ -842,7 +842,8 @@ color: rgba(255, 255, 255, 0.6);
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 40px;
+  margin-top: 33px;
+  margin-bottom: 12px;
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
@@ -856,15 +857,27 @@ color: rgba(255, 255, 255, 0.6);
 .modal-form {
   display: flex;
   flex-direction: column;
+  margin-top: 12px;
   margin-left: 40px;
   margin-right: 40px;
-  
+}
+
+.modal-form > label {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: #757575;
 }
 
 .m-field {
   position: relative;
-  margin-bottom: 28px;
-  
+  margin-bottom: 10px;
+  transition-property: border-color, fill;
+  transition-duration: var(--animation-duration);
+  transition: transform var(--animation-type);
 }
 
 .m-field > input {
@@ -874,6 +887,14 @@ color: rgba(255, 255, 255, 0.6);
   box-sizing: border-box;
   border-radius: 4px;
 }
+
+.m-field :hover,
+.m-field :focus {
+  border-color: var(--accent-color);
+  fill: var(--accent-color);
+  cursor: pointer; 
+}
+
 .m-icon {
   position: absolute;
   top: 50%;
@@ -881,6 +902,50 @@ color: rgba(255, 255, 255, 0.6);
   transform: translateY(-50%);
   margin-left: 12px;
 }
-/*.m-field > input {
-display: block;
-}*/
+
+.comment-field ::placeholder {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.comment-space {
+  width: 448px;
+  padding-left: 16px;
+  padding-top: 12px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+
+.modal-checkbox {
+  display: inline-block;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.modal-check {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color:#757575;
+}
+
+.modal-check > a {
+  text-decoration-line: underline;
+  color: var(--accent-color) ;
+}
+
+.email-submit {
+ margin-left: auto;
+ margin-right: auto;
+}
