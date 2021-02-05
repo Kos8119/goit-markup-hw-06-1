@@ -833,6 +833,7 @@ color: rgba(255, 255, 255, 0.6);
 }
 
 .cross {
+  display: inline-block;
   width: 11px;
   height: 11px;
   color: #000000;
@@ -883,15 +884,12 @@ color: rgba(255, 255, 255, 0.6);
 .m-field > input {
   width: 448px;
   height: 40px;
+  padding-left: 35px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
 }
  
-/*.m-field:focus-within {
-  border-color: var(--accent-color);
-  fill: var(--accent-color);
-} */
 .m-field :hover + .m-icon,
 .m-field :focus + .m-icon {
   border-color: var(--accent-color);
@@ -911,6 +909,17 @@ color: rgba(255, 255, 255, 0.6);
   transform: translateY(-50%);
   margin-left: 12px;
 }
+ 
+
+/*.check-icon {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}*/
+
+ .checkbox:checked + .checkbox-icon {
+background-color: tomato;
+ }
 
 .comment-field ::placeholder {
   font-family: Roboto;
