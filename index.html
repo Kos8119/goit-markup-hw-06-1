@@ -298,14 +298,16 @@
         <div class="backdrop is-hidden" data-modal>
             <div class="modal">
                 <button class="close" data-modal-close>
-                    <img class="cross" src="./images/Vector.png" alt="крестик">
+                    <svg class="m-icon name-icon" width="18" height="18">
+                        <use href="./images/symbol-defs_opt.svg#cross"></use>
+                    </svg>
                 </button>
                 <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
                 <form action="" class="modal-form">
                     <!--чекбокс -->
                     <label for="m-name">Имя</label>
                     <div class="m-field modal-name">
-                        <input type="text" name="name" id="m-name">
+                        <input class="modal-input" type="text" name="name" id="m-name">
                         <svg class="m-icon name-icon" width="18" height="18">
                             <use href="./images/symbol-defs_opt.svg#icon-person-black"></use>
                         </svg>
@@ -330,12 +332,14 @@
                             <textarea class="comment-space" name="comment" id="comment" cols="40" rows="5" placeholder="Введите текст"></textarea>
                         </div>
                     <div class="modal-checkbox">
-                        <input type="checkbox" name="accept" value="accept" id="m-accept" class="check-icon">
-                        <span class="checkbox-icon">
-                            <img src="./images/Checkbox.png" alt="окно чекбокса" width="16" height="15">
-                        </span>
-                        <label for="m-accept" class="modal-check">
-                            Соглашаюсь с рассылкой и принимаю <a class="" href="#">Условия договора</a>
+                        <label for="m-accept" class="modal-check"">
+                            <input type="checkbox" name="accept" value="accept" id="m-accept" class="check-icon visually-hidden">
+                            <svg class="checkbox-icon" width="16" height="15">
+                                <use href="./images/symbol-defs_opt.svg#checkbox"></use>
+                            </svg>
+                            <!--<label for="m-accept" class="modal-check"> -->
+                                Соглашаюсь с рассылкой и принимаю <a class="" href="#">Условия договора</a>
+                            <!--</label> -->
                         </label>
                     </div>
                     <button type="submit" class="button email-submit">Отправить</button>

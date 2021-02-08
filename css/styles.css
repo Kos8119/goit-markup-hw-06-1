@@ -829,6 +829,8 @@ color: rgba(255, 255, 255, 0.6);
   right: 0;
   margin-top: 1px;
   margin-right: 8px;
+  outline: none;
+  cursor: pointer;
   background-color: var(--header-bg-color);
 }
 
@@ -836,7 +838,14 @@ color: rgba(255, 255, 255, 0.6);
   display: inline-block;
   width: 11px;
   height: 11px;
-  color: #000000;
+  fill: var(--text-color);
+  transition-property: background-color;
+  transition-duration: var(--animation-duration);
+}
+
+.close :hover,
+.close :focus {
+  fill: var(--accent-color);
 }
 
 .modal-title {
@@ -898,8 +907,9 @@ color: rgba(255, 255, 255, 0.6);
 }
 .m-field :hover,
 .m-field :focus {
+  outline: none;
   border-color: var(--accent-color);
-  cursor: pointer; 
+  cursor: pointer;
 }
 
 .m-icon {
@@ -908,18 +918,33 @@ color: rgba(255, 255, 255, 0.6);
   left: 0;
   transform: translateY(-50%);
   margin-left: 12px;
+  transition-duration: var(--animation-duration);
+  transition: transform var(--animation-type);
 }
- 
-
+ .checkbox-icon {
+   position: absolute;
+   margin-left: -20px;
+   top: 50%;
+   transform: translateY(-50%);
+   cursor: pointer;
+   width: 16px;
+   height: 15px;
+   border: 1px solid var(--text-color);
+   border-radius: 3px;
+   fill: var(--header-bg-color);
+ }
+.check-icon:checked ~ .checkbox-icon {
+  background-color: var(--accent-color);
+  fill: var(--accent-color)
+  
+  
+}
 /*.check-icon {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }*/
 
- .checkbox:checked + .checkbox-icon {
-background-color: tomato;
- }
 
 .comment-field ::placeholder {
   font-family: Roboto;
@@ -949,6 +974,8 @@ background-color: tomato;
 }
 
 .modal-check {
+  position: relative;
+  text-align: center;
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
