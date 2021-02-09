@@ -678,13 +678,12 @@ footer {
 }
 
 .f-form {
-  display: flex;
+  margin-top: 12px;
 }
 
 .f-label {
-  position: absolute;
+    /*position: absolute;*/
     text-align: center;
-    margin-top: 10px;
     font-family: Roboto;
     font-style: normal;
     font-weight: 700;
@@ -695,7 +694,8 @@ footer {
     color: var(--header-bg-color);
  }
 .f-area {
-  display: flex;
+  display: inline-block;
+  padding-top: 20px;
 }
 .f-input {
   display: inline-block;
@@ -709,17 +709,16 @@ footer {
  }
 
  .f-input::placeholder {
-    text-align: left;
+    margin-left: 16px;
+    align-items: center;
+    
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
     line-height: 1.25;
-
-
-letter-spacing: 0.03em;
-
-color: rgba(255, 255, 255, 0.6);
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
  }
 /* .f-email-text {
   margin-left: 93px;
@@ -746,32 +745,12 @@ color: rgba(255, 255, 255, 0.6);
   border-radius: 4px;
   background-color: var(--footer-bg-color);
 }
-
-
-
-/* убрать после окончания
-.button {
-  display: inline-block;
-  border-style: none;
-  outline: none;
-  padding: 6px 22px;
-  border-radius: 4px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.63;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.06em;
-  color: var(--text-color);
-  background-color: #f5f4fa;
-}
 */
-
 .email-submit {
   position: relative;
   width: 200px;
   height: 50px;
-  padding: 0;
+  padding-left: 29px;
   align-items: flex-start;
   color: var(--header-bg-color);
   background-color: var(--accent-color);
@@ -786,7 +765,7 @@ color: rgba(255, 255, 255, 0.6);
   justify-content: center;
   margin-left: 10px;
   margin-right: 28px;
-  /*margin-top: 13px; */
+  
 } 
 
 /* модальное окно*/
@@ -832,9 +811,11 @@ color: rgba(255, 255, 255, 0.6);
   outline: none;
   cursor: pointer;
   background-color: var(--header-bg-color);
+  transition-property: background-color;
+  transition-duration: var(--animation-duration);
 }
 
-.cross {
+.cross-icon {
   display: inline-block;
   width: 11px;
   height: 11px;
@@ -842,9 +823,8 @@ color: rgba(255, 255, 255, 0.6);
   transition-property: background-color;
   transition-duration: var(--animation-duration);
 }
-
-.close :hover,
-.close :focus {
+.close-button :hover > .cross-icon,
+.close-button :focus > .cross-icon{
   fill: var(--accent-color);
 }
 
@@ -915,7 +895,7 @@ color: rgba(255, 255, 255, 0.6);
 .m-icon {
   position: absolute;
   top: 50%;
-  left: 0;
+  left: 0%;
   transform: translateY(-50%);
   margin-left: 12px;
   transition-duration: var(--animation-duration);
@@ -933,18 +913,12 @@ color: rgba(255, 255, 255, 0.6);
    border-radius: 3px;
    fill: var(--header-bg-color);
  }
+
 .check-icon:checked ~ .checkbox-icon {
   background-color: var(--accent-color);
-  fill: var(--accent-color)
-  
-  
+  fill: var(--header-bg-color);
+  border: var(--header-bg-color); 
 }
-/*.check-icon {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}*/
-
 
 .comment-field ::placeholder {
   font-family: Roboto;
